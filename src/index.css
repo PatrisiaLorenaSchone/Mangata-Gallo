@@ -1,0 +1,520 @@
+:root {
+  font-family: 'Poppins', sans-serif;
+}
+
+/*css reset*/
+*{
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
+}
+button, a{
+  cursor: pointer;
+}
+/*General styling for the main semantic elements*/
+body{
+  background-color: rgb(31, 28, 25);
+  background-image: url(./assets/miranda-mossburg-G4n3JPUNQgg-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
+}
+nav{
+  background-color: rgba(22, 22, 22, 0.555);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.1%;
+}
+.cart-count{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(190, 29, 29);
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width:25px;
+  height: 25px;
+  font-size: 1.1rem;
+  margin-left: -30px;
+  margin-top: -4px;
+}
+nav a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+}
+nav a:hover{
+  border-bottom: 2px solid darkgoldenrod;
+}
+.active{
+  border-bottom: 2px solid white;
+}
+header{
+  background-color: rgba(255, 255, 255, 0.333);
+  /* background-image:url(assets/diamonds.png); */
+  background-position: top;
+  background-size: cover;
+  text-align: center;
+  padding: 39px;
+  padding-top: 70px;
+  /* background-image: url(./assets/gif.gif);
+  background-position:center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh; */
+}
+.header-icons{
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top:30px;
+  right: 50px;
+  cursor: pointer;
+  font-size: 2.3rem;
+  color: rgba(0, 0, 0, 0.888);
+}
+main{
+  background-color: rgba(240, 248, 255, 0.888);
+  display: flex;
+  flex-direction: column;
+  width:70%;
+  padding:10%;
+  gap:111px;
+  margin: auto;
+}
+.info-section, .card-container{
+  background-color: whitesmoke;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.20);
+  padding:11%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 888px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap:35px;
+
+}
+.info-section{
+  background-image: url(./assets/pexels-ron-lach-8131589.jpg);
+  align-self: flex-start;
+}
+.card-container{
+  background-image: url(./assets/pexels-karolina-grabowska-4041232.jpg);
+  background-position: right;
+  align-self: flex-end;
+}
+.card-container button{
+  align-self: flex-start;
+}
+.info-section button{
+  align-self: flex-end;
+}
+.info-section p, .card-container p{
+  max-width: 500px;
+  margin-left: auto;
+  background-color: rgba(245, 245, 245, 0.555);
+  padding:23px;
+}
+.card-container p{
+  padding-left: 0px;
+}
+.btn-pair{
+  margin-left: auto;
+}
+.secondary-btn{
+  background-color: goldenrod;
+  padding:10px 23px;
+  color: white;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+.secondary-btn:hover{
+  background-color: rgb(207, 136, 2);
+  padding:10px 25px;
+}
+footer{
+  background-color: rgba(0, 0, 0, 0.777);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  justify-content: space-evenly;
+  color:whitesmoke;
+}
+footer a{
+  color: gray;
+  padding: 0 15px;
+}
+/*This code styles the promotion banner section*/
+.promotion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #bdb6ab;
+  background-image: linear-gradient(90deg, #bdb6ab 0%, rgba(255, 255, 255, 0.5) 25%, rgba(255, 255, 255, 0.5) 75%, #bdb6ab 100%);
+  width: 80%;
+  margin: auto;
+  padding: 10px 10%;
+}
+.promotion h2{
+  color: rgb(51, 51, 51);
+}
+h2 span{
+  font-size: 60px;
+}
+.promotion small{
+  color: rgb(102, 102, 102);
+}
+.buttons-container{
+  align-self: flex-end;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 20%;
+}
+.buttons-container .button1{
+  padding: 8px 12px;
+  background-color: rgba(189, 182, 171, 0.774);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 5px;
+  transition: 0.5s
+}
+.buttons-container .button1:hover{
+  color: rgb(189, 182, 171);
+  background-color: rgba(255, 255, 255, 0.788);
+  border: 1px solid rgb(189, 182, 171);
+  cursor: pointer;
+}
+.buttons-container .button2:hover{
+  background-color: rgba(189, 182, 171, 0.774);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  font-weight: bold;
+}
+.buttons-container .button2{
+  padding: 8px 12px;
+  border: 1px solid rgb(189, 182, 171);
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 5px;
+  color: rgb(189, 182, 171);
+  background-color: rgba(255, 255, 255, 0.788);
+  cursor: pointer;
+  transition: 0.5s
+}
+.button1:active, .button2:active{
+  padding: 8px 20px;
+}
+/* this code styles the cards columns section */
+
+.card1, .card2, .card3{
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  width: fit-content;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color:rgba(194, 194, 192, 0.7);
+  cursor: pointer;
+  margin: auto;
+  transition: 0.5s;
+}
+.card1:hover, .card2:hover, .card3:hover{
+  transform: scale(1.05);
+}
+.card1{
+  background-color: rgb(51, 51, 51);
+  background-image: url(assets/card1.jpg);
+}
+.card2{
+  background-color: rgb(51, 51, 51);
+  background-image: url(assets/card2.jpg);
+}
+.card3{
+  background-color: rgb(51, 51, 51);
+  background-image: url(assets/card3.jpg);
+
+}
+.card-button{
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid gray;
+  color:rgb(212, 212, 212);
+  padding: 7px 14px;
+  border-radius: 2px;
+  margin-top: 10px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.8s;
+}
+.card-button:hover{
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid gray;
+  color:rgb(61, 61, 61);
+  /* font-weight: bold; */
+}
+@media  screen and (max-width: 800px){
+  footer{
+      padding: 30px;
+  }
+  .button1:active, .button2:active{
+      padding: 8px 12px;
+  }
+  .buttons-container{
+      align-self: center;
+      margin: auto;
+      margin-top: 20px
+  }
+  header{
+      padding: 50px;
+  }
+}
+
+/* products page */
+.productsPage{
+  background-color: rgba(255, 255, 255, 0.888);
+  display: flex;
+}
+.sideBar{
+  background-color: rgb(255, 255, 255);
+  color:#000000;
+  min-width: 200px;
+  padding: 20px;
+}
+.sideBar li{
+  list-style: none;
+  border-bottom: 2px solid rgba(80, 10, 53);
+  padding:10px 5px;
+  display: flex;
+  align-items: center;
+  gap:5px;
+  cursor: pointer;
+}
+.sideBar button{
+  background-color: rgba(80, 10, 53, 0.77);
+  color:white;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+.sideBar button:hover{
+  background-color: rgba(80, 10, 53);
+}
+.sideBar li:hover{
+  text-decoration: none;
+  border-left: 8px solid palevioletred;
+}
+.selected-type{
+  border-left: 8px solid palevioletred;
+}
+.productsSection{
+  justify-content: center;
+  margin: 50px;
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px
+}
+.productCard{
+  display: flex;
+  flex-direction: column;
+  width:288px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  cursor: pointer;
+  transition: 0.8s;
+  overflow: hidden;
+  padding-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+.productCard button{
+  margin:5px
+}
+.productCard img{
+  width: 100%;
+  transition: 0.5s
+}
+.productCard img:hover{
+  filter: brightness(80%); 
+  transform: scale(1.1);
+}
+.productCardText{
+  padding: 20px;
+  color: rgba(80, 10, 53);
+  flex: 1;
+}
+.productCard h3{
+  border-bottom: 1px solid gainsboro;
+}
+ a{
+  text-decoration: none;
+}
+/* product dashboard */
+.product-dashboard{
+  display: flex;
+  justify-content: space-between;
+  padding:5%;
+  flex-wrap: wrap;
+  gap:50px;
+  max-width: 1500px;
+  margin: auto;
+}
+.product-details{
+  flex: 1 1 320px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  padding:10px
+}
+.dashboard-layout{
+  background-color: rgba(255, 255, 255, 0.888);
+}
+.back-button{
+  display: flex;
+  align-items: center;
+  gap:8px;
+  padding:53px 33px 10px 33px;
+  font-weight: 500;
+  color:black;
+  text-decoration: none;
+  width: fit-content;
+  transition: 0.5s;
+  font-size: 1.01rem;
+}
+.back-button:hover{
+  text-decoration: underline;
+  color:brown
+}
+/*ABOUT*/
+.about-section{
+  width:77%;
+  padding:30px 0px;
+  color:white;
+  margin: auto;
+  max-width: 1111px;
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+
+/* DASHBOARD */
+.product-photos{
+  display: flex;
+  border:1px solid rgb(255, 255, 255);
+}
+.product-dashboard-main-photo{
+  display: block;
+  margin-left: auto;
+  height: 551px;
+  width:390px;
+  border:2px solid rgb(255, 255, 255);
+}
+.product-dashboard-small-photos-container{
+  display: flex;
+  flex-direction: column;
+  width:135px;
+}
+.product-dashboard-small-photo{
+  width:100%;
+  height: 181px;
+  border:2px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+/*CHART*/
+.chart-section{
+  position: absolute;
+  width: 333px;
+  background-color: rgba(255, 255, 255, 0.999);
+  color: #232323;
+  right:0px;
+  top:0px;
+  bottom:0px;
+  padding:7%;
+  z-index: 10;
+  text-align: left;
+  height: 100vh;
+  min-height: fit-content;
+}
+.close-btn{
+  position: absolute;
+  right: 30px;
+  top:30px;
+  background-color: darkgoldenrod;
+  color: whitesmoke;
+  padding: 3px 10px;
+  border-radius: 1px;
+  font-size: 2rem;
+}
+.product-chart-container{
+  display: flex;
+  gap:20px;
+  margin-top: 20px;
+  border-bottom: 1px solid gainsboro;
+}
+@media screen and (max-width: 700px){
+  .productsPage{
+    flex-direction:column
+  }
+  .sideBar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px 0px;
+  }
+  .sideBar li{
+    border-bottom: none;
+  }
+  .selected-type{
+    border-left: none;
+  }
+  .card-container p, .info-section p{
+    background-color: rgba(245, 245, 245, 0.555);
+    padding: 10px;
+  }
+  .card-container, .info-section{
+    background-size: cover;
+  }
+  main{
+    padding: 50px 0px;
+    width: 100%;
+  }
+  .secondary-btn{
+    width: 95%;
+    margin: auto;
+  }
+  .product-photos{
+    flex-direction: column-reverse;
+  }
+  .product-dashboard-small-photos-container{
+    flex-direction: row;
+    align-items: center;
+  }
+  .product-dashboard-small-photo{
+    width: 112px;
+    height: 168px;
+    border:2px solid rgb(255, 255, 255);
+  }
+  .product-dashboard-main-photo{
+    display: block;
+    margin-left: auto;
+    height: 515px;
+    width: 343px;
+    border:2px solid rgb(255, 255, 255);
+  }
+  .header-icons{
+    top:10px;
+    right: 10px;
+  }
+}
