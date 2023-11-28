@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom"
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 import { getProduct } from '../components/productsData';
 import { ChartContext } from "../App";
+import SecondaryTitle from '../components/SecondaryTitle';
 
 function ProductDashboard() {
   const [product, setProduct] = React.useState(null)
@@ -51,10 +52,10 @@ if (error) {
                 <img className='product-dashboard-main-photo' src={mainPhoto ? mainPhoto : product.image} alt="" />
               </div>
               <div className='product-details'>
-              <h3>{product.title}</h3>
+              <SecondaryTitle text={product.title}/>
               <p>{product.description}</p>
-              <input type="number" />
-              <h5>price 99.99$</h5>
+              {/* <input type="number" /> */}
+              <h5>For only ${product.price}</h5>
               <button onClick={()=>{setChart((prevChart)=>[...prevChart, product])}} className='secondary-btn'>Add to chart</button>
               </div>
             </div>

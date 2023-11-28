@@ -10,9 +10,9 @@ const Products = ()=>{
     const [products, setProducts] = React.useState([])
     const [loading, setLoading] = React.useState(false)
     const [error, setError] = React.useState(null)
-    const [quantity, setQuantity] = React.useState(0)
-
-    let {setChart} = React.useContext(ChartContext)
+    const [price, setPrice] = React.useState(false)
+    const [added, setAdded] = React.useState(false)
+    let {chart, setChart} = React.useContext(ChartContext)
     const typeFilter = searchParams.get("type")
 
     React.useEffect(()=>{
@@ -27,7 +27,6 @@ const Products = ()=>{
                 setLoading(false)
             }
         }
-
         loadProducts()
     }, [])
 
@@ -37,6 +36,12 @@ const Products = ()=>{
         : products
 
     const productsElements = displayedProducts.map(product =>{
+
+        function handleAdd(){
+            setAdded(true)
+            setChart((prevChart)=>[...prevChart, product])
+        }
+
         return(
         <div className="productCard" key={product.id} >
         <Link 
@@ -49,10 +54,11 @@ const Products = ()=>{
         </Link>
              <div className="productCardText">
                <h3>{product.title}</h3>
-               <input type="number" />
-               <small>price....99$</small>
+               <div className="row">
+               <h5>$ {product.price}</h5>
+               </div>
              </div>
-             <button onClick={()=>{setChart((prevChart)=>[...prevChart, product])}} className="secondary-btn">Add to chart</button>
+             <button onClick={handleAdd} className="secondary-btn">Add to chart</button>
         </div>
         )
     })
@@ -76,17 +82,35 @@ const Products = ()=>{
         return <h1>There was an error: {error.message}</h1>
     }
 
+    function sortBySmallprice(){
+        products.sort((a, b)=> a.price - b.price)
+        setPrice(!price)
+    }
+    function sortByHighprice(){
+        products.sort((a, b)=> b.price - a.price)
+        setPrice(!price)
+    }
+
     return(
         <div className="productsPage">
         <div className="sideBar">
+            <p>Filter by type:</p>
             <li className={typeFilter === "cream" ? "selected-type" : ""} onClick={()=>handleFilterChange("type", "cream")}><PiFlowerLotus /> Creams</li>
             <li className={typeFilter === "oil" ? "selected-type" : ""} onClick={()=>handleFilterChange("type", "oil")}><PiFlowerLotus /> Oils</li>
             <li className={typeFilter === "lotion" ? "selected-type" : ""} onClick={()=>handleFilterChange("type", "lotion")}><PiFlowerLotus /> Lotions</li>
             {typeFilter ? (
             <button onClick={() => handleFilterChange("type", null)}>Clear filters</button>
             ) : null}
+            <p>Filter by price:</p>
+            <li>
+            <input onChange={sortBySmallprice} name="price" id="low-price" type="radio"/><label htmlFor="low-price">Low to High</label>
+            </li>
+            <li>
+            <input onChange={sortByHighprice} name="price" id="high-price" type="radio"/><label htmlFor="high-price">High to Low</label>
+            </li>
         </div>
         <div className='productsSection'>
+        {/* <p className="added-message">Added to Chat</p> */}
             {productsElements}
         </div>
         </div>

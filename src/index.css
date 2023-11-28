@@ -7,7 +7,6 @@
   border: none;
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
   user-select: none;
 }
 button, a{
@@ -16,7 +15,7 @@ button, a{
 /*General styling for the main semantic elements*/
 body{
   background-color: rgb(31, 28, 25);
-  background-image: url(./assets/miranda-mossburg-G4n3JPUNQgg-unsplash.jpg);
+  background-image: url(./assets/rebecca-orlov-epic-playdate-0r5PprYjChg-unsplash.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: top;
@@ -24,11 +23,36 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 nav{
-  background-color: rgba(22, 22, 22, 0.555);
+  background-color: rgba(22, 22, 22, 0.333);
   display: flex;
-  justify-content: space-evenly;
-  padding: 1.1%;
+  justify-content: center;
+  padding: 20px;
+  gap:33px
 }
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  width: 330px;
+  margin-right: 50%
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+}
+.row-center{
+  display: flex;
+  gap:20px;
+  justify-content: center;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.expand{
+  flex-grow: 1;
+}
+
 .cart-count{
   display: flex;
   justify-content: center;
@@ -59,7 +83,7 @@ header{
   background-position: top;
   background-size: cover;
   text-align: center;
-  padding: 39px;
+  padding: 50px;
   padding-top: 70px;
   /* background-image: url(./assets/gif.gif);
   background-position:center;
@@ -77,14 +101,39 @@ header{
   font-size: 2.3rem;
   color: rgba(0, 0, 0, 0.888);
 }
+.home-page{
+  background-color: rgba(255, 255, 255, 0.99);
+  padding:5%;
+}
+.hero-section{
+  background-color: rgba(255, 192, 203, 0.333);
+  background-position: right;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  height: 57vh;
+  color:rgb(39, 39, 39);
+  text-shadow: 2px 2p 2px rgb(0, 0, 0);
+  border-bottom: 2px solid rgba(220, 220, 220, 0.55);
+}
+.hero-section p{
+  max-width: 800px;
+  margin: auto;
+}
 main{
-  background-color: rgba(240, 248, 255, 0.888);
+  background-color: rgba(240, 248, 255, 0);
   display: flex;
   flex-direction: column;
-  width:70%;
-  padding:10%;
-  gap:111px;
-  margin: auto;
+  width:90%;
+  gap:50px;
+  max-width:900px;
+  color:#232323;
+  margin: 50px auto 80px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .info-section, .card-container{
   background-color: whitesmoke;
@@ -109,10 +158,10 @@ main{
   background-position: right;
   align-self: flex-end;
 }
-.card-container button{
+.card-container .secondary-btn{
   align-self: flex-start;
 }
-.info-section button{
+.info-section .secondary-btn{
   align-self: flex-end;
 }
 .info-section p, .card-container p{
@@ -128,11 +177,12 @@ main{
   margin-left: auto;
 }
 .secondary-btn{
-  background-color: goldenrod;
+  background-color: rgba(218, 165, 32, 0.77);
   padding:10px 23px;
   color: white;
   border-radius: 3px;
-  transition: 0.5s;
+  transition: 0.3s;
+  text-align: center;
 }
 .secondary-btn:hover{
   background-color: rgb(207, 136, 2);
@@ -282,6 +332,7 @@ h2 span{
 .productsPage{
   background-color: rgba(255, 255, 255, 0.888);
   display: flex;
+  min-height: 100vh;
 }
 .sideBar{
   background-color: rgb(255, 255, 255);
@@ -289,14 +340,24 @@ h2 span{
   min-width: 200px;
   padding: 20px;
 }
+.sideBar p{
+  font-weight: 500;
+  background-color: #ffc0cb55;
+  padding:12px;
+  width: 90%;
+  margin: 10px -5px 0px -5px;
+}
 .sideBar li{
   list-style: none;
-  border-bottom: 2px solid rgba(80, 10, 53);
+  border-bottom: 2px solid rgba(80, 10, 53, 0.555);
   padding:10px 5px;
   display: flex;
   align-items: center;
   gap:5px;
   cursor: pointer;
+}
+.sideBar li:nth-of-type(3), .sideBar li:last-of-type{
+  border: none;
 }
 .sideBar button{
   background-color: rgba(80, 10, 53, 0.77);
@@ -321,12 +382,13 @@ h2 span{
   margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
-  gap: 55px
+  gap: 55px;
 }
 .productCard{
   display: flex;
   flex-direction: column;
   width:288px;
+  height: fit-content;
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -336,8 +398,11 @@ h2 span{
   padding-bottom: 5px;
   font-family: 'Poppins', sans-serif;
 }
-.productCard button{
+.productCard .secondary-btn{
   margin:5px
+}
+.productCard .secondary-btn:active{
+  background-color: gold;
 }
 .productCard img{
   width: 100%;
@@ -358,15 +423,31 @@ h2 span{
  a{
   text-decoration: none;
 }
+.quantity-input{
+  border: 1px solid gainsboro;
+  text-align: center;
+  border-radius: 3px;
+}
+/* .added-message{
+  position: absolute;
+  background-color: rgba(80, 10, 53);
+  padding: 20px;
+  color: white;
+  border-radius: 3px;
+  margin: auto;
+} */
+
+
 /* product dashboard */
 .product-dashboard{
   display: flex;
   justify-content: space-between;
-  padding:5%;
+  padding:5% 10%;
   flex-wrap: wrap;
   gap:50px;
   max-width: 1500px;
   margin: auto;
+  /* background-color: white; */
 }
 .product-details{
   flex: 1 1 320px;
@@ -374,8 +455,7 @@ h2 span{
   display: flex;
   flex-direction: column;
   gap:30px;
-  padding:10px
-}
+  padding:10px;}
 .dashboard-layout{
   background-color: rgba(255, 255, 255, 0.888);
 }
@@ -396,15 +476,31 @@ h2 span{
   color:brown
 }
 /*ABOUT*/
+.about-page{
+  background-color: whitesmoke;
+  padding:5%;
+}
 .about-section{
-  width:77%;
-  padding:30px 0px;
-  color:white;
-  margin: auto;
-  max-width: 1111px;
+  background-color: whitesmoke;
+  max-width:850px;
+  color:#232323;
+  margin: 50px auto 80px auto;
   display: flex;
   flex-direction: column;
-  gap:30px;
+  justify-content: space-evenly;
+  gap:20px;
+}
+.about-section input{
+  padding: 10px;
+  margin-bottom: 10px;
+  border:1px solid gainsboro;
+}
+.about-section label{
+  font-weight: 500;
+}
+.about-section svg:hover{
+  fill: rgba(80, 10, 53);
+  cursor: pointer;
 }
 
 /* DASHBOARD */
@@ -439,11 +535,21 @@ h2 span{
   right:0px;
   top:0px;
   bottom:0px;
-  padding:7%;
+  padding:6%;
   z-index: 10;
   text-align: left;
   height: 100vh;
   min-height: fit-content;
+}
+.chart-container{
+  display: flex;
+  flex-direction: column;
+  gap:50px;
+  margin-top: 70px;
+}
+.chart-container svg{
+  font-size: 10rem;
+  margin: 33px auto;
 }
 .close-btn{
   position: absolute;
@@ -461,9 +567,46 @@ h2 span{
   margin-top: 20px;
   border-bottom: 1px solid gainsboro;
 }
+.remove-chart-btn{
+  color: rgba(128, 128, 128, 0.888);
+  padding:5px;
+  border-radius: 3px;
+}
+.chart-section .total{
+  margin-top: 10px;
+  align-items: center;
+  gap: 5px;
+}
+.total p{
+  border-bottom: 2px dotted gainsboro;
+  padding-top: 8px;
+}
+.secondary-title{
+  display: flex;
+  align-items: center;
+  gap:5px;
+  border-bottom: 5px solid rgba(255, 192, 203, 0.333);
+  font-size: 1.2rem;
+  color:#333333;
+}
 @media screen and (max-width: 700px){
   .productsPage{
     flex-direction:column
+  }
+  .productsSection{
+    margin: 20px;
+    gap:20px
+  }
+  .productCard{
+    width: 150px;
+    height: 250px;
+  }
+  .productCard img{
+    height: 150px;
+  }
+  .productCardText{
+    padding: 7px;
+    font-size: 0.77rem;
   }
   .sideBar{
     display: flex;
@@ -476,8 +619,11 @@ h2 span{
   .sideBar li{
     border-bottom: none;
   }
-  .selected-type{
-    border-left: none;
+  .sideBar .selected-type{
+    border:none;
+  }
+  .sideBar li:hover{
+    border:none;
   }
   .card-container p, .info-section p{
     background-color: rgba(245, 245, 245, 0.555);
@@ -491,30 +637,36 @@ h2 span{
     width: 100%;
   }
   .secondary-btn{
-    width: 95%;
+    width:82%;
     margin: auto;
+    align-self: center;
   }
   .product-photos{
-    flex-direction: column-reverse;
+    margin: auto;
+  }
+  .product-dashboard{
+    padding: 5%;
   }
   .product-dashboard-small-photos-container{
-    flex-direction: row;
     align-items: center;
+    width: fit-content;
   }
   .product-dashboard-small-photo{
     width: 112px;
-    height: 168px;
+    height: 105px;
     border:2px solid rgb(255, 255, 255);
   }
   .product-dashboard-main-photo{
     display: block;
-    margin-left: auto;
-    height: 515px;
-    width: 343px;
+    height: 323px;
+    width: 200px;
     border:2px solid rgb(255, 255, 255);
   }
   .header-icons{
     top:10px;
     right: 10px;
+  }
+  nav img{
+    display: none;
   }
 }
