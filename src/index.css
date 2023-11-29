@@ -14,13 +14,38 @@ button, a{
 }
 /*General styling for the main semantic elements*/
 body{
-  background-color: rgb(31, 28, 25);
+  background-color: rgb(255, 255, 255);
   background-image: url(./assets/rebecca-orlov-epic-playdate-0r5PprYjChg-unsplash.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif;
+}
+.loading-page{
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: dissapear 3s 0s 1 normal forwards;
+}
+@keyframes dissapear {
+  0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(-50px);
+    display: none;
+	}
+}
+p{
+  line-height: 1.5;
 }
 nav{
   background-color: rgba(22, 22, 22, 0.333);
@@ -102,28 +127,29 @@ header{
   color: rgba(0, 0, 0, 0.888);
 }
 .home-page{
-  background-color: rgba(255, 255, 255, 0.99);
+  background-color: rgba(255, 255, 255, 0.7);
+  background-image: url(./assets/Asset3@3x.png);
   padding:5%;
 }
 .hero-section{
-  background-color: rgba(255, 192, 203, 0.333);
-  background-position: right;
-  background-size: cover;
+  background-color: rgba(255, 192, 203, 0.7);
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  background-repeat: no-repeat;
   height: 57vh;
-  color:rgb(39, 39, 39);
-  text-shadow: 2px 2p 2px rgb(0, 0, 0);
+  color:rgb(61, 61, 61);
   border-bottom: 2px solid rgba(220, 220, 220, 0.55);
 }
 .hero-section p{
   max-width: 800px;
-  margin: auto;
+  padding: 20px;
 }
+
 main{
   background-color: rgba(240, 248, 255, 0);
+  
   display: flex;
   flex-direction: column;
   width:90%;
@@ -137,7 +163,7 @@ main{
 }
 .info-section, .card-container{
   background-color: whitesmoke;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.20);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   padding:11%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -327,8 +353,29 @@ h2 span{
       padding: 50px;
   }
 }
-
-/* products page */
+/* ERROR PAGE*/
+.error-page{
+  background-color: rgba(255, 255, 255, 0.888);
+  color: #313131;
+  padding: 5%;
+  align-items: center;
+  gap:30px
+}
+.error-page h1{
+  font-size: 5rem;
+  color: rgb(212, 159, 168);
+}
+.error-page ul{
+  max-width: 700px;
+  list-style: none;
+}
+.error-page li{
+  margin:7px;
+}
+.error-page span, .error-page a{
+  font-weight: 600;
+}
+/* PRODUCTS PAGE */
 .productsPage{
   background-color: rgba(255, 255, 255, 0.888);
   display: flex;
@@ -378,6 +425,7 @@ h2 span{
 }
 .productsSection{
   justify-content: center;
+  width: 100%;
   margin: 50px;
   margin-top: 100px;
   display: flex;
@@ -391,7 +439,7 @@ h2 span{
   height: fit-content;
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   cursor: pointer;
   transition: 0.8s;
   overflow: hidden;
@@ -589,13 +637,24 @@ h2 span{
   font-size: 1.2rem;
   color:#333333;
 }
+.secondary-title svg{
+  height: 35px;
+  width: 35px;
+}
 @media screen and (max-width: 700px){
   .productsPage{
     flex-direction:column
   }
+  .home-page{
+    background-size: 300%;
+    background-attachment: fixed;
+  }
   .productsSection{
-    margin: 20px;
+    margin:10px 0px 30px 0px;
     gap:20px
+  }
+  .hero-section{
+    width: 100%;
   }
   .productCard{
     width: 150px;

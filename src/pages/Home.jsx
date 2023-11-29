@@ -7,7 +7,7 @@ const Home =()=>{
     return(
     <div className="home-page">
         <div className="hero-section">
-        <p>Welcome to our online haven of beauty – where self-care meets indulgence!<br/> Discover a curated collection of premium hair care and skincare products that cater to your every need. Dive into a world of transformative hair elixirs, rejuvenating skincare essentials, and pampering delights. 
+        <h2 >Welcome to our online haven of beauty and selfcare!</h2><p>Discover a curated collection of premium hair care and skincare products that cater to your every need. Dive into a world of transformative hair elixirs, rejuvenating skincare essentials, and pampering delights. 
         From nourishing shampoos to luxurious serums, our selection is meticulously chosen for quality and effectiveness.</p>
         </div>
     <main>
