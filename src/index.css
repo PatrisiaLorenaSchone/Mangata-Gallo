@@ -48,12 +48,16 @@ p{
   line-height: 1.5;
 }
 nav{
+  position: sticky;
+  top: 0;
   background-color: rgba(22, 22, 22, 0.333);
   display: flex;
   justify-content: center;
   padding: 20px;
-  gap:33px
+  gap:33px;
+  z-index:8;
 }
+
 .nav-bar{
   display: flex;
   justify-content: space-between;
@@ -99,10 +103,29 @@ nav a{
 nav a:hover{
   border-bottom: 2px solid darkgoldenrod;
 }
+.navbar{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap:23px;
+}
+.scrolledNav{
+  background-color: pink;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 35px;
+}
+.scrolledNav a{
+  color: #232323;
+  font-weight: 500;
+}
 .active{
   border-bottom: 2px solid white;
 }
 header{
+  display: flex;
+  justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.333);
   /* background-image:url(assets/diamonds.png); */
   background-position: top;
@@ -116,15 +139,26 @@ header{
   background-attachment: fixed;
   height: 100vh; */
 }
+header a{
+  margin: auto;
+}
 .header-icons{
   display: flex;
   gap: 20px;
-  position: absolute;
-  top:30px;
-  right: 50px;
+  justify-self: flex-end;
+  margin-top: -35px;
+  margin-right: -35px;
   cursor: pointer;
   font-size: 2.3rem;
   color: rgba(0, 0, 0, 0.888);
+}
+.nav-icons{
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  font-size: 2rem;
+  width: 200px;
+  cursor: pointer;
 }
 .home-page{
   background-color: rgba(255, 255, 255, 0.7);
@@ -134,6 +168,7 @@ header{
 .hero-section{
   background-color: rgba(255, 192, 203, 0.7);
   display: flex;
+  padding-top: 30px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -149,7 +184,6 @@ header{
 
 main{
   background-color: rgba(240, 248, 255, 0);
-  
   display: flex;
   flex-direction: column;
   width:90%;
@@ -226,117 +260,6 @@ footer a{
   color: gray;
   padding: 0 15px;
 }
-/*This code styles the promotion banner section*/
-.promotion{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  background-color: #bdb6ab;
-  background-image: linear-gradient(90deg, #bdb6ab 0%, rgba(255, 255, 255, 0.5) 25%, rgba(255, 255, 255, 0.5) 75%, #bdb6ab 100%);
-  width: 80%;
-  margin: auto;
-  padding: 10px 10%;
-}
-.promotion h2{
-  color: rgb(51, 51, 51);
-}
-h2 span{
-  font-size: 60px;
-}
-.promotion small{
-  color: rgb(102, 102, 102);
-}
-.buttons-container{
-  align-self: flex-end;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-right: 20%;
-}
-.buttons-container .button1{
-  padding: 8px 12px;
-  background-color: rgba(189, 182, 171, 0.774);
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 5px;
-  font-weight: bold;
-  margin: 5px;
-  transition: 0.5s
-}
-.buttons-container .button1:hover{
-  color: rgb(189, 182, 171);
-  background-color: rgba(255, 255, 255, 0.788);
-  border: 1px solid rgb(189, 182, 171);
-  cursor: pointer;
-}
-.buttons-container .button2:hover{
-  background-color: rgba(189, 182, 171, 0.774);
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 5px;
-  font-weight: bold;
-}
-.buttons-container .button2{
-  padding: 8px 12px;
-  border: 1px solid rgb(189, 182, 171);
-  border-radius: 5px;
-  font-weight: bold;
-  margin: 5px;
-  color: rgb(189, 182, 171);
-  background-color: rgba(255, 255, 255, 0.788);
-  cursor: pointer;
-  transition: 0.5s
-}
-.button1:active, .button2:active{
-  padding: 8px 20px;
-}
-/* this code styles the cards columns section */
-
-.card1, .card2, .card3{
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  width: fit-content;
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-  color:rgba(194, 194, 192, 0.7);
-  cursor: pointer;
-  margin: auto;
-  transition: 0.5s;
-}
-.card1:hover, .card2:hover, .card3:hover{
-  transform: scale(1.05);
-}
-.card1{
-  background-color: rgb(51, 51, 51);
-  background-image: url(assets/card1.jpg);
-}
-.card2{
-  background-color: rgb(51, 51, 51);
-  background-image: url(assets/card2.jpg);
-}
-.card3{
-  background-color: rgb(51, 51, 51);
-  background-image: url(assets/card3.jpg);
-
-}
-.card-button{
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid gray;
-  color:rgb(212, 212, 212);
-  padding: 7px 14px;
-  border-radius: 2px;
-  margin-top: 10px;
-  width: 100%;
-  cursor: pointer;
-  transition: 0.8s;
-}
-.card-button:hover{
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 1px solid gray;
-  color:rgb(61, 61, 61);
-  /* font-weight: bold; */
-}
 @media  screen and (max-width: 800px){
   footer{
       padding: 30px;
@@ -382,10 +305,15 @@ h2 span{
   min-height: 100vh;
 }
 .sideBar{
+  position: relative;
   background-color: rgb(255, 255, 255);
   color:#000000;
   min-width: 200px;
   padding: 20px;
+}
+.filters-container{
+  position: sticky;
+  top: 70px;
 }
 .sideBar p{
   font-weight: 500;
@@ -577,6 +505,7 @@ h2 span{
 /*CHART*/
 .chart-section{
   position: absolute;
+  font-size: 1rem;
   width: 333px;
   background-color: rgba(255, 255, 255, 0.999);
   color: #232323;
@@ -594,6 +523,9 @@ h2 span{
   flex-direction: column;
   gap:50px;
   margin-top: 70px;
+}
+.chart-container a{
+  width: 80%;
 }
 .chart-container svg{
   font-size: 10rem;
@@ -667,13 +599,15 @@ h2 span{
     padding: 7px;
     font-size: 0.77rem;
   }
-  .sideBar{
+  .filters-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: row;
     width: 100%;
-    padding: 20px 0px;
+  }
+  .sideBar{
+    padding:0px;
   }
   .sideBar li{
     border-bottom: none;
@@ -686,7 +620,7 @@ h2 span{
   }
   .card-container p, .info-section p{
     background-color: rgba(245, 245, 245, 0.555);
-    padding: 10px;
+    padding: 20px 10px 5px 10px;
   }
   .card-container, .info-section{
     background-size: cover;

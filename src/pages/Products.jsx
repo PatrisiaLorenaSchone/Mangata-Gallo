@@ -94,6 +94,7 @@ const Products = ()=>{
     return(
         <div className="productsPage">
         <div className="sideBar">
+          <div className="filters-container">
             <p>Filter by type:</p>
             <li className={typeFilter === "cream" ? "selected-type" : ""} onClick={()=>handleFilterChange("type", "cream")}><PiFlowerLotus /> Creams</li>
             <li className={typeFilter === "oil" ? "selected-type" : ""} onClick={()=>handleFilterChange("type", "oil")}><PiFlowerLotus /> Oils</li>
@@ -108,6 +109,7 @@ const Products = ()=>{
             <li>
             <input onChange={sortByHighprice} name="price" id="high-price" type="radio"/><label htmlFor="high-price">High to Low</label>
             </li>
+          </div>
         </div>
         <div className='productsSection'>
         {/* <p className="added-message">Added to Chat</p> */}
