@@ -57,12 +57,23 @@ nav{
   gap:33px;
   z-index:8;
 }
-
-.nav-bar{
+.hamburger-menu{
+  display: none;
+  min-height: 35px;
+  min-width: 35px;
+}
+.sidenav{
   display: flex;
-  justify-content: space-between;
-  width: 330px;
-  margin-right: 50%
+  justify-content: center;
+  gap:33px;
+}
+.scrolledNav .sidenav{
+  position: absolute;
+  top: 88px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 20px;
 }
 .row{
   display: flex;
@@ -107,7 +118,7 @@ nav a:hover{
   flex: 1;
   display: flex;
   justify-content: center;
-  gap:23px;
+  gap:25px;
 }
 .scrolledNav{
   background-color: pink;
@@ -645,6 +656,7 @@ footer a{
   }
   .card-container, .info-section{
     background-size: cover;
+    padding: 9%;
   }
   main{
     padding: 50px 0px;
@@ -681,6 +693,17 @@ footer a{
     right: 10px;
   }
   nav img{
+    height: 18px;
+    padding-top: 10px;
+  }
+  .scrolledNav .navbar{
     display: none;
+  }
+  .scrolledNav{
+    gap:25px
+  }
+  .scrolledNav .hamburger-menu{
+    display: block;
+    font-size: 3rem;
   }
 }

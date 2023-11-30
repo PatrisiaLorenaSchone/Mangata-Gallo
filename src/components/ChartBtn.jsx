@@ -8,7 +8,7 @@ function ChartBtn(props) {
   const [showChart, setShowChart] = React.useState(false)
   return (
     <div className={props.class}>
-        <BiSolidShoppingBags onClick={()=>setShowChart(!showChart)} fill="#232323" aria-label="Shopping chart"/>
+        <BiSolidShoppingBags onClick={()=>setShowChart(!showChart)} fill="#252525" aria-label="Shopping chart"/>
         <div className="cart-count">{chart ? chart.length : 0}</div>
         {showChart && <Chart setShowChart={setShowChart}/>}
     </div>
