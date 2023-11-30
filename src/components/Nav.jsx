@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import React from "react"
 import logo from "../assets/Asset4@3x.png"
 import ChartBtn from "./ChartBtn"
@@ -21,7 +21,7 @@ const Nav =()=>{
       <>
       <nav className={navChange ? "scrolledNav" : ""}>
         {!showNav ? <BiMenu fill="#252525" onClick={()=>setShowNav(!showNav)} aria-label="hamburger menu" className="hamburger-menu"/> : <IoMdClose fill="#252525" aria-label="close menu"  onClick={()=>setShowNav(!showNav)} className="hamburger-menu"/>}
-        {navChange && <img height={25} src={logo}/>}
+        {navChange && <img className="nav-logo" height={25} src={logo}/>}
         <div className={showNav ? "sidenav" : "navbar"}>
         <NavLink className={({isActive})=> isActive ? "active" : null} to="/">HOME</NavLink>
         <NavLink className={({isActive})=> isActive ? "active" : null} to="/products">PRODUCTS</NavLink>
