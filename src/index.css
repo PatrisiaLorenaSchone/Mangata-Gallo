@@ -166,7 +166,12 @@ header a{
   padding:5%;
 }
 .hero-section{
-  background-color: rgba(255, 192, 203, 0.7);
+  background-image: url(./assets/pexels-moose-photos-1036623.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode:normal;
+  background-position: -10%;
+  background-color: rgba(235, 172, 183, 0.7);
   display: flex;
   padding-top: 30px;
   flex-direction: column;
@@ -174,14 +179,26 @@ header a{
   justify-content: center;
   text-align: center;
   height: 57vh;
-  color:rgb(61, 61, 61);
+  color:rgb(32, 32, 32);
+  text-shadow: 1px 1px 5px white;
   border-bottom: 2px solid rgba(220, 220, 220, 0.55);
 }
+
 .hero-section p{
   max-width: 800px;
   padding: 20px;
 }
-
+.hero-section h2{
+  padding: 10px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-bottom: 2px solid white;
+  color: white;
+  text-shadow: none;
+} 
+.hero-section div{
+  max-width: 750px;
+}
 main{
   background-color: rgba(240, 248, 255, 0);
   display: flex;
@@ -587,6 +604,10 @@ footer a{
   }
   .hero-section{
     width: 100%;
+    background-image: none;
+  }
+  .hero-section small{
+    display: none;
   }
   .productCard{
     width: 150px;

@@ -17,7 +17,11 @@ const Home =()=>{
     <div className="home-page">
         <div className="hero-section">
             {/* <div className="promotion"><span>20%</span> off with the code beauty</div> */}
-        <h2 >Welcome to our online haven of beauty and selfcare!</h2><p>Discover a curated collection of premium haircare and skincare products that cater to your every need. Dive into a world of transformative hair elixirs, rejuvenating skincare essentials, and pampering delights. From nourishing creams to luxurious oils, our selection is meticulously chosen for quality and effectiveness.</p>
+        <div>
+        <h2>Welcome to our online haven of beauty and selfcare!</h2>
+        <p>Discover a curated collection of premium haircare and skincare products that cater to your every need. Dive into a world of transformative hair elixirs, rejuvenating skincare essentials, and pampering delights. From nourishing creams to luxurious oils, our selection is meticulously chosen for quality and effectiveness.</p>
+        <small >- Photo by Moose Photos</small>
+        </div>
         </div>
     <main>
         <section className="info-section">
