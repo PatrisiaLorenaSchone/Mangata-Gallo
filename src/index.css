@@ -57,24 +57,20 @@ nav{
   gap:33px;
   z-index:8;
 }
+.sidenav{
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap:33px;
+  z-index:8;
+}
 .hamburger-menu{
   display: none;
   min-height: 35px;
   min-width: 35px;
 }
-.sidenav{
-  display: flex;
-  justify-content: center;
-  gap:33px;
-}
-.scrolledNav .sidenav{
-  position: absolute;
-  top: 88px;
-  left: 0;
-  right: 0;
-  background-color: white;
-  padding: 20px;
-}
+
 .row{
   display: flex;
   justify-content: space-between;
@@ -705,5 +701,18 @@ footer a{
   .scrolledNav .hamburger-menu{
     display: block;
     font-size: 3rem;
+  }
+  .sidenav{
+    display: flex;
+    justify-content: center;
+    gap:33px;
+  }
+  .scrolledNav .sidenav{
+    position: absolute;
+    top: 88px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 20px;
   }
 }

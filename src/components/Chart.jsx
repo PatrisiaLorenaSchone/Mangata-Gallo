@@ -9,14 +9,16 @@ function Chart({setShowChart}) {
 
   function getOccurence(array, value){
     let count = 0;
-    array.forEach((v)=>(
-      v == value && count++
+    array.forEach((item) => (item.id === value.id && count++
     ))
     return count
   }
 
   let uniqueProducts = chart.reduce((acc, curr)=>{
-    return acc.includes(curr) ? acc : [...acc, curr]
+    if(!acc.find((item)=> item.id === curr.id)){
+      acc.push(curr);
+    }
+    return acc
   }, [])
 
     let products = uniqueProducts.map((prod)=>{
