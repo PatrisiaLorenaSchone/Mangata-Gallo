@@ -4,6 +4,8 @@ import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 import { getProduct } from '../components/productsData';
 import { ChartContext } from "../App";
 import SecondaryTitle from '../components/SecondaryTitle';
+import logo from "../assets/Asset2@3x.png"
+import gif from "../assets/giphy.gif"
 
 function ProductDashboard() {
   const [product, setProduct] = React.useState(null)
@@ -31,8 +33,8 @@ function ProductDashboard() {
 if (loading) {
     return (
       <div className="loading-page">
-        <img height="30" src="../assets/Asset2@3x.png"/>
-        <img src="../assets/giphy.gif"/>
+        <img height="30" src={logo}/>
+        <img src={gif}/>
       </div>
       )
 }

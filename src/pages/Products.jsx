@@ -3,6 +3,8 @@ import {getProducts} from "../components/productsData"
 import { Link, useSearchParams } from "react-router-dom"
 import { PiFlowerLotus } from "react-icons/pi";
 import { ChartContext } from "../App";
+import logo from "../assets/Asset2@3x.png"
+import gif from "../assets/giphy.gif"
 
 
 const Products = ()=>{
@@ -76,10 +78,10 @@ const Products = ()=>{
 
     if (loading) {
         return(
-        <div className="loading-page">
-          <img height="30" src="../assets/Asset2@3x.png"/>
-          <img src="../assets/giphy.gif"/>
-        </div>
+          <div className="loading-page">
+            <img height="30" src={logo}/>
+            <img src={gif}/>
+          </div>
         )
     }
     
