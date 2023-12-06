@@ -31,8 +31,8 @@ function ProductDashboard() {
 if (loading) {
     return (
       <div className="loading-page">
-        <img height="30" src="./assets/Asset2@3x.png"/>
-        <img src="./assets/giphy.gif"/>
+        <img height="30" src="../assets/Asset2@3x.png"/>
+        <img src="../assets/giphy.gif"/>
       </div>
       )
 }
