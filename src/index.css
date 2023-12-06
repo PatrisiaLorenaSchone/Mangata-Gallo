@@ -57,6 +57,10 @@ nav{
   gap:33px;
   z-index:8;
 }
+.left{
+  transform: translateX(1000px);
+  transition: 0.8s ease-in;
+}
 .sidenav{
   position: sticky;
   top: 0;

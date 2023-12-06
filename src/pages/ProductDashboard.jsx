@@ -29,7 +29,12 @@ function ProductDashboard() {
   }, [id])
 
 if (loading) {
-    return <h1>Loading...</h1>
+    return (
+      <div className="loading-page">
+        <img height="30" src="../src/assets/Asset2@3x.png"/>
+        <img src="../src/assets/giphy.gif"/>
+      </div>
+      )
 }
 
 if (error) {
