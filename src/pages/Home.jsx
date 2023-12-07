@@ -1,5 +1,5 @@
 import React from "react"
-import { easeInOut, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import{ Link } from "react-router-dom"
 import SecondaryTitle from "../components/SecondaryTitle"
 
@@ -16,15 +16,15 @@ const Home =()=>{
         </div>
     <motion.main>
         <motion.section 
-        initial={{
-          padding: 0
-        }}
-        whileInView={{
-          padding: "11%"
-        }}
-        transition={{
-          duration: 1
-        }}
+        // initial={{
+        //   padding: 0
+        // }}
+        // whileInView={{
+        //   padding: "11%"
+        // }}
+        // transition={{
+        //   duration: 1
+        // }}
         className="info-section">
             <div>
             <SecondaryTitle text="Reinventing Beauty"/>
@@ -34,15 +34,15 @@ const Home =()=>{
             <Link className="secondary-btn" to="/about">About us</Link>
         </motion.section>
         <motion.section
-          initial={{
-            padding: 0
-          }}
-          whileInView={{
-            padding: "11%"
-          }}
-          transition={{
-            duration: 1,
-          }}
+          // initial={{
+          //   padding: 0
+          // }}
+          // whileInView={{
+          //   padding: "11%"
+          // }}
+          // transition={{
+          //   duration: 1,
+          // }}
          className="card-container">
             <div>
             <SecondaryTitle text="Enjoy our products"/>
